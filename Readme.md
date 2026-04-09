@@ -1,6 +1,6 @@
 # Big Red Button Programming
 
-Guide and resources to program a Yoqanr PC Macro Button.
+Guide and resources to program a [Yoqanr USB Button](https://www.amazon.com/dp/B0DL5XHNJX).
 
 Yes, it comes with decentish setup software. No, I wasn't satisfied...
 
@@ -15,7 +15,7 @@ Yes, it comes with decentish setup software. No, I wasn't satisfied...
 
 ## Other Resources
 
-* [Wireshark](https://www.wireshark.org/) 
+* [Wireshark](https://www.wireshark.org/)
   * [USBPcap](https://desowin.org/usbpcap/)
     * [Wireshark + USBPcap](https://desowin.org/usbpcap/tour.html)
 * [KeyboardTester](https://www.keyboardtester.com/tester.html)
