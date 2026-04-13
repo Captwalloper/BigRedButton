@@ -1,8 +1,8 @@
 import hid
 
 # Replace with the IDs you find using ListDevices
-VENDOR_ID = 0x2704 # VID 9988
-PRODUCT_ID = 0x2018 # PID 8216
+VENDOR_ID = 0x2704 # VID
+PRODUCT_ID = 0x2018 # PID
 ENTER = 0x28
 F13 = 0x68
 
