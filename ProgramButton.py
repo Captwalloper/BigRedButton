@@ -1,3 +1,4 @@
+import argparse
 import hid
 
 # Replace with the IDs you find using ListDevices
@@ -44,7 +45,7 @@ def program_button(key_code):
         ] + [0x00] * 59 # pad to 64
         result = device.write([0x00] + data) # Prepend the 0x00 Report ID for Windows
         if result > 0:
-            print(f"Successfully wrote {result} bytes. Successfully set key to {key_code}!")
+            print(f"Successfully wrote {result} bytes. Successfully set key to {key_code:#x}!")
         else:
             print(f"Write failed. {result}")
             return
@@ -54,7 +55,10 @@ def program_button(key_code):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    program_button(F13)
+    parser = argparse.ArgumentParser(description="Program the button to provided hexcode, or to 'Enter' (0x28) by default")
+    parser.add_argument("keycode", nargs="?", default=0x28, type=lambda x: int(x, 16), help="keycode for button to send on press")
+    args = parser.parse_args()
+    program_button(args.keycode)
 
 # test with https://www.keyboardtester.com/tester.html
 # unofficial lookup for keycodes https://gist.github.com/MightyPork/6da26e382a7ad91b5496ee55fdc73db2
